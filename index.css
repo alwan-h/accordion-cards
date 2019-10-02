@@ -1,0 +1,53 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  width: 1000px;
+  height: 500px;
+  background-color: beige;
+}
+
+.flex-container > div {
+  flex-grow: 1;
+  height: 100%;
+  transition: 0.5s;
+  filter: grayscale(100%);
+}
+
+.bg-1 {
+  background-image: url("./images/image-1.jpg");
+}
+
+.bg-2 {
+  background-image: url("./images/image-2.jpg");
+}
+
+.bg-3 {
+  background-image: url("./images/image-3.jpg");
+}
+
+.bg-4 {
+  background-image: url("./images/image-4.jpg");
+}
+
+.bg-size {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-container > div:hover {
+  flex-grow: 2;
+  filter: grayscale(0%);
+}
+
+.flex-container > div.focus {
+  flex-grow: 8;
+}
