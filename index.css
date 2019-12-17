@@ -5,36 +5,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .flex-container {
   display: flex;
   width: 1000px;
   height: 500px;
-  background-color: beige;
+  background-color: black;
+  -webkit-box-shadow: -2px 19px 86px -40px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 19px 86px -40px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 19px 86px -40px rgba(0, 0, 0, 0.75);
 }
 
 .flex-container > div {
   flex-grow: 1;
   height: 100%;
-  transition: 0.5s;
   filter: grayscale(100%);
-}
-
-.bg-1 {
-  background-image: url("./images/image-1.jpg");
-}
-
-.bg-2 {
-  background-image: url("./images/image-2.jpg");
-}
-
-.bg-3 {
-  background-image: url("./images/image-3.jpg");
-}
-
-.bg-4 {
-  background-image: url("./images/image-4.jpg");
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .bg-size {
@@ -49,5 +38,28 @@ body {
 }
 
 .flex-container > div.focus {
-  flex-grow: 8;
+  flex-grow: 20;
+  filter: grayscale(0%);
+}
+
+.close {
+  width: 18px;
+  height: 18px;
+  margin-top: 10px;
+  margin-right: 80px;
+  padding: 10px;
+  float: right;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.show {
+  opacity: 1;
+  transform: rotate(180deg);
+  margin-right: 25px;
+}
+
+.no-pointer-events {
+  pointer-events: none;
 }
